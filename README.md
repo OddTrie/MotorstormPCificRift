@@ -12,6 +12,8 @@ Built on [ps3recomp](https://github.com/sp00nznet/ps3recomp).
 
 It boots. It reaches the menus. The island is still loading.
 
+![Loading screen running natively on D3D12](docs/screenshot.webp)
+
 - ✅ PPU code recompiled (11,722 functions)
 - ✅ SPU jobs and SPURS workloads lifted
 - ✅ Boots to the front-end menus on D3D12
