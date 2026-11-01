@@ -1,0 +1,15 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "MotorStorm: Pacific Rift",
+  "system": "PS3",
+  "type": "recomp",
+  "original": { "region": "Europe", "revision": "01.01", "serial": "BCES00129" },
+  "project": "MotorStorm: PC-ific Rift",
+  "status": "in-progress",
+  "targets": ["Windows"],
+  "toolchain": "Ps3recomp",
+  "approach": "Static recompilation of PPU and SPU code to C/C++, D3D12 RSX backend",
+  "help": ["RSX to D3D12 rendering", "SPU/SPURS job accuracy", "Audio"],
+  "tags": ["racing", "ps3", "d3d12", "spu"],
+  "notes": "Boots to the front-end menus on Windows. PPU fully recompiled, SPU jobs and SPURS workloads lifted. 3D scenes and racing not working yet. No game data in the repo: bring your own dump."
+}

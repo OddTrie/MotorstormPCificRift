@@ -1,0 +1,61 @@
+# --- Game data, keys and firmware (Sony material: never commit) ---
+*.iso
+*.ISO
+game/
+gamedata/
+hdd0/
+hdd1/
+fw_hle/
+dev_flash/
+*.BIN
+*.elf
+*.ELF
+*.self
+*.SELF
+*.sprx
+*.SPRX
+*.pkg
+*.PKG
+*.PUP
+*.SFO
+*.rap
+*.RAP
+*.edat
+*.EDAT
+*.key
+*.keys
+*.dkey
+*.ird
+*.IRD
+act.dat
+idps*
+
+# --- Generated (contains the title's code; regenerate locally) ---
+recompiled/
+spu/
+build/
+analysis/
+
+# --- Upstream checkouts / SDK drops (own repos) ---
+ps3recomp/
+ps3recomp-v0.18.0-win-x64/
+tools/pydeps/
+
+# --- Private working notes ---
+/PLAN.md
+/PLAYBOOK*
+
+# --- Debug dumps and captures ---
+/vp_*.hlsl
+/fp_pick_*.hlsl
+/duck_vp.hlsl
+/tex_*.bmp
+/texb8_*.bmp
+captures/
+*.rdc
+*.wpix
+*.dds
+*.png
+*.mp4
+*.log
+*.dmp
