@@ -10,15 +10,28 @@ Built on [ps3recomp](https://github.com/sp00nznet/ps3recomp).
 
 ## Status
 
-It boots. It reaches the menus. The island is still loading.
+It boots, it loads races, and you can drive. Slowly.
 
 ![Loading screen running natively on D3D12](docs/screenshot.webp)
 
 - ✅ PPU code recompiled (11,722 functions)
 - ✅ SPU jobs and SPURS workloads lifted
 - ✅ Boots to the front-end menus on D3D12
-- 🚧 3D scenes, in-race rendering, audio polish
-- ❌ Not playable yet
+- ✅ Races load (~10 s) and are drivable
+- ✅ In-race rendering: sky, water, tyre tracks, vehicle shadows, decals and exposure fixed
+- 🚧 Performance: ~10-17 fps in races, ~30 in light scenes
+- 🚧 Audio polish, remaining visual glitches
+- ❌ Not fully playable yet
+
+### Recent progress
+
+- Race loads cut from ~4 min to ~10 s (real lwcond wake-ups instead of polling)
+- Race intro no longer white: small luminance targets are clipped correctly, so auto-exposure works
+- sRGB output encode and per-texture sRGB degamma, matching the RSX: no more washed-out scenes
+- Fixed the shoreline seam, cyan water glow, white sky while driving, edge streaks, flicker and see-through tyre tracks
+- Vehicle shadow blobs no longer draw as boxes (depth-to-colour copy, depth bounds, decal-edge clip)
+- Fixed a driving crash in the SPU-filled command FIFO
+- Perf: high-resolution timer for guest sleeps, texture hash memo, cached depth lookups
 
 ## What you need
 
