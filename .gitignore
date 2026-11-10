@@ -35,6 +35,7 @@ recompiled/
 spu/
 build/
 analysis/
+backups/
 
 # --- Upstream checkouts / SDK drops (own repos) ---
 ps3recomp/
