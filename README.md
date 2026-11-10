@@ -24,6 +24,10 @@ It boots, it loads races, and you can drive a full race at a steady 30 fps.
 - 🚧 Audio polish, remaining visual glitches
 - ❌ Not fully playable yet
 
+Frame rates above were measured on a high-end PC: Intel Core i9-14900K, NVIDIA GeForce
+RTX 4070, 64 GB DDR4-2133, Windows 11, at 1280x720. The recomp is mostly CPU-bound (PPU and SPU
+code run on the host CPU), so slower CPUs will see lower numbers.
+
 ### Screenshots
 
 | | |
