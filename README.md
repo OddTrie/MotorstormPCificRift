@@ -21,7 +21,8 @@ It boots, it loads races, and you can drive a full race at a steady 30 fps.
 - ✅ In-race rendering: sky, water, tyre tracks, shadows, decals, HUD and exposure fixed
 - ✅ Performance: ~28-30 fps in races at the game's native 30 fps cap
 - ✅ Mods and cheats, with an in-game menu
-- 🚧 Optional 60 fps mode: ~55 fps average, not a locked 60 yet, some camera stutter
+- 🚧 Optional 60 fps mode: ~55-56 fps on average and close to 60 most of the time, but it
+  still dips in busy parts of a race and the camera can stutter
 - 🚧 Audio polish, remaining visual glitches
 - ❌ Not fully playable yet
 
@@ -47,7 +48,8 @@ All shots are taken straight from the D3D12 backbuffer at 1280x720.
 - Fixed the strange pale patches of sand near the Kanaloa Bay sign
 - Water splashes no longer turn into dark squares
 - Less stutter at the start of a race, especially from the second time you play
-- 60 fps mode runs a little smoother (a few more frames per second)
+- 60 fps mode is up from ~52 to ~55-56 fps on average, and most of the time it sits at
+  58-59 fps. A steady 60 is the next goal
 
 #### Earlier
 
