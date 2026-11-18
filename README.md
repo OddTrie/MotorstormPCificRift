@@ -66,6 +66,17 @@ Your own legally dumped copy of the game (BCES00129). This repo contains **no ga
 data, keys, firmware or recompiled game code**, and never will. Everything
 title-specific is generated locally from your own dump.
 
+## Launcher
+
+`MotorStormLauncher.exe` in the project root starts the game without a console window. It lets you:
+
+- turn mods on or off, change their load order, and build mods that ship a `build.py` (it offers to build any enabled mod that isn't built before playing)
+- turn cheats from the mods' `patches.txt` on or off
+- pick the screen, a 30 or 60 FPS target, and the volume (saved in `launcher.ini`)
+
+It edits the same `mods/mods.toml` as the F10 menu, and locks while the game runs. Build it with
+`cmake --build build --target MotorStormLauncher`.
+
 ---
 
 *Not affiliated with Sony Interactive Entertainment or Evolution Studios.
