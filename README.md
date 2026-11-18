@@ -20,6 +20,7 @@ It boots, it loads races, and you can drive a full race at a steady 30 fps.
 - ✅ Races load (~10 s) and are drivable with a pad or keyboard
 - ✅ In-race rendering: sky, water, tyre tracks, shadows, decals, HUD and exposure fixed
 - ✅ Performance: ~28-30 fps in races at the game's native 30 fps cap
+- ✅ Mods and cheats, with an in-game menu
 - 🚧 Optional 60 fps mode: ~55 fps average, not a locked 60 yet, some camera stutter
 - 🚧 Audio polish, remaining visual glitches
 - ❌ Not fully playable yet
@@ -40,6 +41,16 @@ All shots are taken straight from the D3D12 backbuffer at 1280x720.
 
 ### Recent progress
 
+- Mods: change tracks, textures and trees, add cheats, or write your own (see [Mods](#mods))
+- A launcher to pick your mods, cheats, screen, 30 or 60 fps, and volume before you play
+- No more empty black window popping up next to the game
+- Fixed the strange pale patches of sand near the Kanaloa Bay sign
+- Water splashes no longer turn into dark squares
+- Less stutter at the start of a race, especially from the second time you play
+- 60 fps mode runs a little smoother (a few more frames per second)
+
+#### Earlier
+
 - Race frame rate up from ~10-17 fps to ~30 fps: SPURS contention fix, MFC lookup cache,
   double-buffered draw batching, PSO/SRV/texture-environment caches, vertex program
   hash cache and bulk upload, SIMD vertex decode
@@ -50,9 +61,6 @@ All shots are taken straight from the D3D12 backbuffer at 1280x720.
 - Water spray no longer renders as squares (DXT block un-rotation), 3D shadow textures,
   particle shadows fixed
 - Experimental internal resolution scaling (up to 4x), still has cropping issues
-
-#### Earlier
-
 - Race loads cut from ~4 min to ~10 s (real lwcond wake-ups instead of polling)
 - Race intro no longer white: small luminance targets are clipped correctly, so auto-exposure works
 - sRGB output encode and per-texture sRGB degamma, matching the RSX: no more washed-out scenes
@@ -68,14 +76,31 @@ title-specific is generated locally from your own dump.
 
 ## Launcher
 
-`MotorStormLauncher.exe` in the project root starts the game without a console window. It lets you:
+Start the game with `MotorStormLauncher.exe`. Before you play, it lets you:
 
-- turn mods on or off, change their load order, and build mods that ship a `build.py` (it offers to build any enabled mod that isn't built before playing)
-- turn cheats from the mods' `patches.txt` on or off
-- pick the screen, a 30 or 60 FPS target, and the volume (saved in `launcher.ini`)
+- turn mods on or off and choose which one wins when two change the same thing
+- turn cheats on or off
+- pick which screen to play on, 30 or 60 fps, and the volume
 
-It edits the same `mods/mods.toml` as the F10 menu, and locks while the game runs. Build it with
-`cmake --build build --target MotorStormLauncher`.
+It remembers your choices for next time.
+
+## Mods
+
+Mods live in the `mods` folder, one folder per mod. Your game files are never changed, so
+turning a mod off puts everything back the way it was.
+
+Press **F10** during the game to turn mods and cheats on or off. Cheats work straight away;
+other mods take effect the next time you start the game. You can also pick them in the
+launcher before playing.
+
+Some example mods to try:
+
+- **Evening race**: the first Kanaloa Bay race at sunset
+- **Track remix**: that race moved to The Rift, bikes and ATVs only
+- **Autumn jungle**: the palms and plants turn orange
+- **Tall palms**: palm trees grow 2.5 times taller
+- **Trainer**: infinite boost, super speed and a turbo burst
+- **Stopwatch**: time your laps with F7 and F8
 
 ---
 
