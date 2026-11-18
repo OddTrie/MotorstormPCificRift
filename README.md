@@ -44,7 +44,6 @@ All shots are taken straight from the D3D12 backbuffer at 1280x720.
 
 - Mods: change tracks, textures and trees, add cheats, or write your own (see [Mods](#mods))
 - A launcher to pick your mods, cheats, screen, 30 or 60 fps, and volume before you play
-- No more empty black window popping up next to the game
 - Fixed the strange pale patches of sand near the Kanaloa Bay sign
 - Water splashes no longer turn into dark squares
 - Less stutter at the start of a race, especially from the second time you play
